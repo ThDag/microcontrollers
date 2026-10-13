@@ -1,13 +1,15 @@
-[opts]
-compiler = "avr-gcc"
+[default_config]
+version = "0.10.1"
+assembler = "avr"
+instruction_set = "AVR"
 
-[target]
-arch = "avr"
-
-[diagnostics]
+[default_config.opts]
 compiler = "avr-gcc"
-flags = [
-  "-mmcu=atmega328p",
-  "-isystem",
-  "/opt/homebrew/Cellar/avr-gcc@9/9.5.0/avr/include"
+compile_flags_txt = [
+    "-mmcu=atmega328p",
+    "-isystem",
+    "/opt/homebrew/Cellar/avr-gcc@9/9.5.0/avr/include",
 ]
+diagnostics = true
+default_diagnostics = false
+
