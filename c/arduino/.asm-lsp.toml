@@ -1,2 +1,13 @@
-[default]
-architecture = "avr"
+[opts]
+compiler = "avr-gcc"
+
+[target]
+arch = "avr"
+
+[diagnostics]
+compiler = "avr-gcc"
+flags = [
+  "-mmcu=atmega328p",
+  "-isystem",
+  "/opt/homebrew/Cellar/avr-gcc@9/9.5.0/avr/include"
+]
